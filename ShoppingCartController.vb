@@ -25,7 +25,7 @@ Namespace Controllers
         ' GET: /ShoppingCart/AddToCart/5
 
         Function AddToCart(ByVal id As Integer) As ActionResult
-            Dim addedCourse = storeDB.Course.Single(Function(course) course.CourId = id)
+        Dim addedCourse = storeDB.Course.Single(Function(course) course.CourseId = id)
 
             Dim cart = ShoppingCart.GetCart(HttpContext)
 
@@ -46,7 +46,7 @@ Namespace Controllers
             Dim itemCount = cart.RemoveFromCart(id)
 
             Dim results = New ShoppingCartRemoveViewModel With {
-                .Message = Server.HtmlEncode(albumName) &
+                    .Message = Server.HtmlEncode(courseName) &
                     " has been removed from your shopping cart.",
                 .CartTotal = cart.GetTotal,
                 .CartCount = cart.GetCount,
