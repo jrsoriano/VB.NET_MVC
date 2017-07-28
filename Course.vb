@@ -15,7 +15,7 @@ Namespace Models
 			Public Property ProfessorId As Integer
 			<Required(ErrorMessage:= "A Course Name is required")>
 			<StringLength(160)>
-			Public Property Name As String
+			Public Property CourseName As String
 			<Required(ErrorMessage:= "Fee is required")>
 			<Range(0.01, 100, ErrorMessage:= "Price must be between 0.01 and 100.00")>
 			Public Property Fee as Decimal
