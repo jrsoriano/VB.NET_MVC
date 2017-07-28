@@ -1,2 +1,2 @@
-# VB.NET_MVC(partial)
+# VB.NET
 model, view, and controller examples, parts from an unfinished MVC project.
